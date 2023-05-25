@@ -1,0 +1,105 @@
+// Variables
+
+////Colores
+$color__blanco: #f4f9f9
+$color__negro: #241c15
+$color__fondo: #fbeeca
+$color__primario: #007c89
+$color__secundario: #c5dbf2
+
+//// Tamanyos
+////// gap = size = tamanyo
+
+$gap__s: 0.5rem
+$gap__m: 1rem
+$gap__l: 1.5rem
+$gap__xl: 2rem
+$container__m: 800px
+
+//// Tipografias
+
+// Generales
+
+body
+  background-color: $color__fondo
+  font-family: 'Open Sans', sans-serif
+  color: $color__negro
+
+
+// Componentes
+
+.container
+  padding:
+    left: $gap__m
+    right: $gap__m
+  margin: 0 auto
+  max-width: $container__m
+
+.imagen
+  width: 100%
+
+.link
+  color: $color__primario
+
+.boton
+  display: inline-block
+  padding: $gap__m
+  background-color: $color__primario
+  color: $color__blanco
+  text-decoration: none
+  font-weight: bold
+  transition: .1s
+  border: 1px solid $color__primario
+  &:hover
+    background-color: transparent
+    color: $color__primario
+    border-color: transparent
+  &--transparente
+    background-color: transparent
+    color: $color__primario
+    border-color: transparent
+    &:hover
+      border-color: $color__primario
+
+.alerta
+  background-color: $color__secundario
+  padding:
+    top: $gap__s
+    bottom: $gap__s
+
+//// Al importar las tipos desde google fonts (Abajo del todo, en CSS), quitar los ; del final
+
+.fuente__titulo
+  font-family: 'Libre Baskerville', serif
+
+// Pagina inicio
+
+.hero
+  .container
+    display: flex
+    gap: $gap__xl
+    align-items: center
+    $padding__size: 4rem
+    padding:
+      top: $padding__size
+      bottom: $padding__size
+    @media all and (max-width: 600px)
+      flex-direction: column
+
+  &__textos, &__imagen
+    flex: 1
+  &__titulo
+    font-size: $gap__xl
+  &__descripcion
+    font-size: $gap__l
+  &__lista
+    display: flex
+    padding: 0
+    list-style: none
+    gap: $gap__m
+
+
+
+
+
+
